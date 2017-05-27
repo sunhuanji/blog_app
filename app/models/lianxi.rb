@@ -1,0 +1,2 @@
+class Lianxi < ApplicationRecord
+end
