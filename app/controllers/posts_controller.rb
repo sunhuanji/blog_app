@@ -30,9 +30,9 @@ class PostsController < ApplicationController
 
   # Update action updates the post with the new information
   def update
-    if @post.update_attributes(post_params)
+    if @post.update(post_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to @post
     else
       flash[:alert] = "Error updating post!"
       render :edit
