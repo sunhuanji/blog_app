@@ -18,7 +18,13 @@ gem 'pry-rails'
 
 gem 'simple_form'
 
+gem 'ckeditor'
+
 gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'jquery-turbolinks'
+
+gem 'jquery-rails'
 
 gem 'mysql2'
 # Use Puma as the app server
