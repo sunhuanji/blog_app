@@ -16,6 +16,7 @@
 
 //= require bootstrap-sprockets
 //= require ckeditor/init
+//= require bootstrap-tagsinput.min
 
 //= require rails-ujs
 //= require turbolinks
