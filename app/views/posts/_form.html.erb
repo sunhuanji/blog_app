@@ -23,6 +23,11 @@
     </div>
 
     <div class="form-group">
+      <%= f.label :tag_list, "タグ（カンマ区切り）" %><br>
+      <%= text_field_tag 'post[tag_list]', @post.tag_list.join(',') %>
+    </div>
+
+    <div class="form-group">
       <%= f.button :submit %>
     </div>
 <% end %>

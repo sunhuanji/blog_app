@@ -26,6 +26,8 @@ gem 'jquery-turbolinks'
 
 gem 'jquery-rails'
 
+gem 'acts-as-taggable-on', '~> 4.0'
+
 gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
