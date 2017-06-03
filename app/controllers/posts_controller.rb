@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # Index action to render all posts
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at DESC")
   end
 
   # New action for creating post
