@@ -1,0 +1,16 @@
+.container
+  .col-sm-10.col-sm-offset-1.col-xs-12.blog-content
+    - @posts.each do |post|
+      .col-xs-12
+        .text-center
+          h2
+            = post.title
+          h6
+            = render 'posts/tag_list', tag_list: post.tag_list
+          h6
+            = post.created_at.strftime('%b %d, %Y')
+        div
+          = raw(post.body).truncate(358)
+        .text-center
+          = link_to "ブログ詳細へ", post_path(post)
+        br

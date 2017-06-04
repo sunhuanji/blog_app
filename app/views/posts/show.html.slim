@@ -5,7 +5,9 @@
     = render 'posts/tag_list', tag_list: @post.tag_list
   h5.text-center
     = @post.created_at.strftime('%b %d, %Y')
-  h6
-    = @post.user.email
+  h5.text-center
+    = link_to 'Edit', edit_post_path(@post)
+  h5.text-center
+    = link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' }
   div
     = raw @post.body

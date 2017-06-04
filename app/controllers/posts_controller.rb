@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update, :show, :destroy]
-  #before_action :find_by_tag, only: [:search]
-
+  before_action :authenticate_user!, except: [:index, :show, :search]
   # Index action to render all posts
   def index
     @posts = Post.order("created_at DESC")
@@ -51,7 +50,6 @@ class PostsController < ApplicationController
 
   # The destroy action removes the post permanently from the database
   def destroy
-    binding.pry
     if @post.destroy
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path
