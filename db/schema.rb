@@ -24,16 +24,9 @@ ActiveRecord::Schema.define(version: 20170603033814) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "lianxis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "body", null: false
-    t.string "title", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "body", null: false
     t.string "title", null: false
+    t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
