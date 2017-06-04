@@ -1,0 +1,11 @@
+.col-sm-11.col-xs-12.blog-content
+  h2.text-center
+    = @post.title
+  h5.text-center
+    = render 'posts/tag_list', tag_list: @post.tag_list
+  h5.text-center
+    = @post.created_at.strftime('%b %d, %Y')
+  h6
+    = @post.user.email
+  div
+    = raw @post.body
