@@ -2,5 +2,7 @@
   <h2 class="text-center"><%= @post.title %></h2>
   <h5 class="text-center"><%= render 'posts/tag_list', tag_list: @post.tag_list %></h5>
   <h5 class="text-center"><%= @post.created_at.strftime('%b %d, %Y') %></h5>
+  <h5 class="text-center"><%= link_to 'Edit', edit_post_path(@post) %></h5>
+  <h5 class="text-center"><%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
   <div><%= raw @post.body %></div>
 </div>

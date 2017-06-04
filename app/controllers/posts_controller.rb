@@ -1,9 +1,15 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
+  before_action :find_post, only: [:edit, :update, :show, :destroy]
+  #before_action :find_by_tag, only: [:search]
 
   # Index action to render all posts
   def index
     @posts = Post.order("created_at DESC")
+  end
+
+  def search
+    #binding.pry
+    @posts = Post.tagged_with(params[:format])
   end
 
   # New action for creating post
@@ -45,6 +51,7 @@ class PostsController < ApplicationController
 
   # The destroy action removes the post permanently from the database
   def destroy
+    binding.pry
     if @post.destroy
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path
@@ -62,4 +69,5 @@ class PostsController < ApplicationController
   def find_post
     @post = Post.find(params[:id])
   end
+
 end

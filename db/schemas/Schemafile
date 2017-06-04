@@ -1,5 +1,4 @@
 require 'ckeditor_assets.schema'
-require 'lianxis.schema'
 require 'posts.schema'
 require 'taggings.schema'
 require 'tags.schema'

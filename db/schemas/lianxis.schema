@@ -1,6 +1,0 @@
-create_table "lianxis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-  t.text "body", null: false
-  t.string "title", null: false
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-end
